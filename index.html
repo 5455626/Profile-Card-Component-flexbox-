@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <style>
+      * {
+        font-family: "Kumbh Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: hsl(185, 75%, 39%);
+        background-image: url(./images/bg-pattern-top.svg),
+          url(./images/bg-pattern-bottom.svg);
+        background-position: bottom -133% left -50%, top -97% right -39%;
+        background-repeat: no-repeat;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 1.1rem;
+        overflow: hidden;
+      }
+
+      .detils {
+        width: 100%;
+        gap: 2rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -1rem;
+        border: none;
+      }
+      /* .img {
+        max-width: 11rem;
+        background-color: #ffff;
+        padding: 1rem;
+      } */
+      img {
+        max-width: 10rem;
+        position: absolute;
+        border-radius: 50%;
+        top: 25%;
+        left: 38%;
+        padding: 0.3rem;
+        background-color: #fff;
+        border: 1px solid #fff;
+      }
+
+      .name {
+        margin-top: 4rem;
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+
+      .age {
+        color: hsl(0, 0%, 59%);
+        font-size: 1.8rem;
+      }
+
+      .lond {
+        color: hsl(0, 0%, 59%);
+        font-size: 1.6rem;
+      }
+
+      .num {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        border-top: 1px solid hsl(0, 3%, 86%);
+        padding: 1.5rem;
+        min-width: 100%;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .dad {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .block {
+        display: block;
+        color: hsl(0, 0%, 59%);
+        letter-spacing: 0.7px;
+        font-size: 1.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <div class="ground">
+          <svg
+            width="350"
+            height="140"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <defs>
+              <linearGradient x1="50%" y1=".779%" x2="50%" y2="100%" id="c">
+                <stop stop-color="#0989B4" stop-opacity="0" offset="0%" />
+                <stop stop-color="#53FFEE" offset="99.94%" />
+              </linearGradient>
+              <linearGradient x1="50%" y1=".779%" x2="50%" y2="100%" id="d">
+                <stop stop-color="#0989B4" stop-opacity="0" offset="0%" />
+                <stop stop-color="#53FFEE" offset="99.94%" />
+              </linearGradient>
+              <path id="a" d="M0 0h350v140H0z" />
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+              <mask id="b" fill="#fff"><use xlink:href="#a" /></mask>
+              <use fill="#41CBD3" xlink:href="#a" />
+              <g mask="url(#b)" opacity=".5">
+                <g transform="translate(-11 -4)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 14.834 14.8)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 197.411 14.8)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+                <g transform="translate(-11 91.63)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 14.834 14.8)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 197.411 14.8)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+                <g transform="translate(-11 43.815)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+                <g transform="translate(11.822 18.77)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 14.834 14.8)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 197.411 14.8)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+                <g transform="translate(11.822 114.4)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 14.834 14.8)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    transform="rotate(180 197.411 14.8)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+                <g transform="translate(11.822 66.585)">
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 60.479 14.8)"
+                    cx="60.479"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="14.834"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="151.767"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 106.123 14.8)"
+                    cx="106.123"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(-90 243.055 14.8)"
+                    cx="243.055"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="197.411"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#d)"
+                    cx="334.344"
+                    cy="14.8"
+                    rx="14.834"
+                    ry="14.8"
+                  />
+                  <ellipse
+                    fill="url(#c)"
+                    transform="rotate(90 288.7 14.8)"
+                    cx="288.699"
+                    cy="14.8"
+                    rx="14.8"
+                    ry="14.834"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="detils">
+          <div class="img">
+            <img src="./images/image-victor.jpg" alt="person picture" />
+          </div>
+
+          <p class="name">Victor Corest <span class="age">26</span></p>
+          <span class="lond">London</span>
+          <div class="num">
+            <div class="dad">
+              <div>80K</div>
+              <span class="block">Followers</span>
+            </div>
+            <div class="dad">
+              <div>803K</div>
+              <span class="block">Likes</span>
+            </div>
+            <div class="dad">
+              <div>1.4K</div>
+              <span class="block">Photos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="top"></div>
+  </body>
+</html>
